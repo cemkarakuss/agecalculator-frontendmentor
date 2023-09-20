@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <style>
+    .attribution { margin-top: 50px; font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <form action="/age-calculator-app-main/age-calculator-app-main/index.html" method="POST" class="inputs" name="birth">
+      <div class="dateDiv">
+        <div class="dayDiv">
+          <label id="lab-1" for="day">Day</label>
+          <input type="number" name="day" placeholder="DD" id="day">
+          <div id="req-1" class="error-required">This field is required</div>
+          <div id="val-1" class="error-invalid">Must be a valid day</div>
+        </div>
+
+        <div class="monthDiv">
+          <label id="lab-2" for="month">Month</label>
+          <input type="number" name="month" placeholder="MM" id="month">
+          <div id="req-2" class="error-required">This field is required</div>
+          <div id="val-2" class="error-invalid">Must be a valid month</div>
+        </div>
+
+
+        <div class="yearDiv">
+          <label id="lab-3" for="year">Year</label>
+          <input type="number" name="year" placeholder="YYYY" id="year" min="1900" max="3000">
+          <div id="req-3" class="error-required">This field is required</div>
+          <div id="val-3" class="error-invalid">Must be a valid past</div>
+        </div>
+      </div>  
+      <div class="line-arrow">
+        <div class="line"><hr></div>
+        <button name="submit" type="submit" class="arrow-icon">
+            <img src="assets/images/icon-arrow.svg" alt="">
+        </button>
+      </div>
+      
+    </form>
+
+        
+
+    <div class="resultDiv">
+      <h1><span class="cizgi1">--</span>years</h1>
+      <h1><span class="cizgi2">--</span>months</h1>
+      <h1><span class="cizgi3">--</span>days</h1>
+    </div>
+
+
+  </div>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/cemkarakuss" target="_blank">Cem Karakus</a>.
+  </div>
+
+  <script src="assets/app/index.js"></script>
+  <script src="assets/lib/moment/moment.min.js"></script>
+  
+</body>
+</html>
